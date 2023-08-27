@@ -111,8 +111,10 @@ for course in required_graduate_courses:
 st.subheader('Restricted Undergraduate Electives')
 
 # Insert additional text
-st.write("All of the FIN restricted electives are offered at least one time in the academic year and in any modality given the majority of the FIN restricted electives are offered in-person. Below is the list of restricted courses that will be offered in the Fall and Winter semester.")
-
+st.write("All of the FIN restricted electives are offered at least one time in the academic year and in any modality.  Below is the list of restricted courses that will be offered in the academic year, by semester.")
+st.markdown("""
+- The majority of the FIN restricted electives are offered in-person.
+""")
 col1, col2 = st.columns(2)
 
 with col1:
