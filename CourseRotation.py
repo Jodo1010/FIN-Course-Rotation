@@ -36,7 +36,7 @@ for course in required_courses:
     with col2:
         winter_options = 'In-person, Fully Online' if fall_option == 'In-person' else 'In-person'
         st.write(f"{course} options:")
-        st.write(winter_options)
+        st.markdown(f"**{winter_options}**")  # Highlighting the output
 
 # Restricted Electives
 st.subheader('Restricted Electives')
