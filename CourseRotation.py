@@ -47,11 +47,11 @@ for course in required_courses:
         fall_option = st.selectbox(f"**{course}:**", ['In-person', 'Fully Online'], key=f"{course}_fall")
 
     # Display Winter semester options in the right column based on Fall selection
+    # with col2:
+    #     # st.markdown(f"<div style='text-align: right'><strong>{course}:<strong></div>", unsafe_allow_html=True)
+    #     # winter_options = 'In-person, Fully Online' if fall_option == 'In-person' else 'In-person'
+    #     # st.markdown(f"<div style='text-align: right'>{winter_options}</div>", unsafe_allow_html=True)
     with col2:
-        # st.markdown(f"<div style='text-align: right'><strong>{course}:<strong></div>", unsafe_allow_html=True)
-        # winter_options = 'In-person, Fully Online' if fall_option == 'In-person' else 'In-person'
-        # st.markdown(f"<div style='text-align: right'>{winter_options}</div>", unsafe_allow_html=True)
-        with col2:
         winter_options = ['In-person', 'Fully Online'] if fall_option == 'In-person' else ['In-person']
         winter_option = st.selectbox(f"**{course} (Winter):**", winter_options, key=f"{course}_winter")
 
@@ -81,11 +81,11 @@ for course in required_graduate_courses:
         fall_option = st.selectbox(f"**{course}:**", ['In-person', 'Fully Online'], key=f"{course}_fall")
 
     # Display Winter semester options in the right column based on Fall selection
-    with col2:
+    # with col2:
         # st.markdown(f"<div style='text-align: right'><strong>{course}:<strong></div>", unsafe_allow_html=True)
         # winter_options = 'In-person, Fully Online' if fall_option == 'In-person' else 'In-person'
         # st.markdown(f"<div style='text-align: right'>{winter_options}</div>", unsafe_allow_html=True)
-        with col2:
+    with col2:
         winter_options = ['In-person', 'Fully Online'] if fall_option == 'In-person' else ['In-person']
         winter_option = st.selectbox(f"**{course} (Winter):**", winter_options, key=f"{course}_winter")
 
