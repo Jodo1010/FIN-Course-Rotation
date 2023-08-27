@@ -21,8 +21,8 @@ st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
 st.subheader('Required Courses')
 
 # Insert additional text
-st.write("All of the FIN required courses are offered in the Fall and Winter semester in multiple modalities throughout the academic year (in-person and fully online). 
-        Adjust the Fall semester modality for each course to determine the modality options for the same course in the Winter semester.")
+st.write("All of the FIN required courses are offered in the Fall and Winter semester in multiple modalities throughout the academic year (in-person and fully online). ")
+st.write("Adjust the Fall semester modality for each course to determine the modality options for the same course in the Winter semester.")
 
 col1, col2 = st.columns(2)
 with col1:
