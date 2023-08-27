@@ -49,7 +49,7 @@ st.markdown("""
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("<div style='text-align: center';color: #046A38;'><strong>Fall</strong></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center'><span style='color: #046A38;'><strong>Fall</strong></div>", unsafe_allow_html=True)
     for course in required_core:
         st.markdown(f"<div style='text-align: center'>{course}: In-Person and Fully Online</div>", unsafe_allow_html=True)
         
