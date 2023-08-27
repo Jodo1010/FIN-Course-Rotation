@@ -45,7 +45,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown("**Fall**")
     for course in restricted_electives_fall:
-        st.text(f"{course}: In-Person or Fully Online")
+        st.markdown(f"<div style='text-align: left'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
         
 with col2:
     st.markdown("<div style='text-align: right'><strong>Winter</strong></div>", unsafe_allow_html=True)
