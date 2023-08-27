@@ -51,7 +51,7 @@ st.markdown("""
 
 col1, col2 = st.columns(2)
 with col1:
-    st.markdown("**Fall**")
+    st.markdown("<div style='text-align: center'><strong>Fall</strong></div>", unsafe_allow_html=True)
 with col2:
     st.markdown("<div style='text-align: center'><strong>Winter</strong></div>", unsafe_allow_html=True)
 
@@ -82,7 +82,7 @@ st.write("Adjust the Fall semester modality for each course to determine the mod
 
 col1, col2 = st.columns(2)
 with col1:
-    st.markdown("**Fall**")
+    st.markdown("<div style='text-align: center'><strong>Fall</strong></div>", unsafe_allow_html=True)
 with col2:
     st.markdown("<div style='text-align: center'><strong>Winter</strong></div>", unsafe_allow_html=True)
 
@@ -113,7 +113,7 @@ st.write("All of the FIN restricted electives are offered at least one time in t
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("**Fall**")
+    st.markdown("<div style='text-align: center'><strong>Fall</strong></div>", unsafe_allow_html=True)
     for course in restricted_electives_fall:
         st.markdown(f"<div style='text-align: center'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
         
@@ -121,7 +121,7 @@ with col2:
     st.markdown("<div style='text-align: center'><strong>Winter</strong></div>", unsafe_allow_html=True)
 
     for course in restricted_electives_winter:
-        st.markdown(f"<div style='text-align: right'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='text-align: center'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
 
 
 
