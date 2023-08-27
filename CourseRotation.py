@@ -21,21 +21,21 @@ st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
 st.subheader('Required Courses')
 col1, col2 = st.columns(2)
 with col1:
-    st.write("Fall")
+    st.markdown("**## Fall**")  # Large and bold text
 with col2:
-    st.write("Winter")
+    st.markdown("**## Winter**")  # Large and bold text
 
 for course in required_courses:
     col1, col2 = st.columns(2)
 
     # Fall semester dropdown in the left column
     with col1:
-        fall_option = st.selectbox(f"{course}:", ['In-person', 'Fully Online'], key=f"{course}_fall")
+        fall_option = st.selectbox(f"**{course} (Fall):**", ['In-person', 'Fully Online'], key=f"{course}_fall")  # Bold text
 
     # Display Winter semester options in the right column based on Fall selection
     with col2:
+        st.markdown(f"**{course} options:**")  # Bold text
         winter_options = 'In-person, Fully Online' if fall_option == 'In-person' else 'In-person'
-        st.write(f"{course}:")
         st.markdown(f"**{winter_options}**")  # Highlighting the output
 
 # Restricted Electives
@@ -43,12 +43,12 @@ st.subheader('Restricted Electives')
 col1, col2 = st.columns(2)
 
 with col1:
-    st.write("Fall")
+    st.markdown("**## Fall**")  # Large and bold text
     for course in restricted_electives_fall:
         st.text(f"{course}: In-Person or Fully Online")
 
 with col2:
-    st.write("Winter")
+    st.markdown("**## Winter**")  # Large and bold text
     for course in restricted_electives_winter:
         st.text(f"{course}: In-Person or Fully Online")
 
