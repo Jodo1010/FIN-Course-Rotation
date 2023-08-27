@@ -19,6 +19,12 @@ st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
 
 # Required Courses
 st.subheader('Required Courses')
+col1, col2 = st.columns(2)
+with col1:
+    st.subheader('Fall')
+with col2:
+    st.subheader('Winter')
+
 for course in required_courses:
     col1, col2 = st.columns(2)
     
@@ -31,19 +37,17 @@ for course in required_courses:
     # Display Winter semester options in the right column based on Fall selection
     with col2:
         winter_options = 'In-person, Fully Online' if fall_option == 'In-person' else 'In-person'
-        st.write(f"{course} Winter options: {winter_options}")
+        st.write(f"{course} options: {winter_options}")
 
 # Restricted Electives
 st.subheader('Restricted Electives')
 col1, col2 = st.columns(2)
 
-# Display Restricted Electives for Fall (No dropdowns, just text)
 with col1:
     st.write("Fall")
     for course in restricted_electives_fall:
         st.text(f"{course}: In-Person or Fully Online")
 
-# Display Restricted Electives for Winter (No dropdowns, just text)
 with col2:
     st.write("Winter")
     for course in restricted_electives_winter:
