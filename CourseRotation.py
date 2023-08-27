@@ -32,13 +32,32 @@ st.markdown("""
   - Online Hybrid (Asychronous & Synchronous) 
 """)
 
-
-
 # Update button to refresh options based on Winter selections
 # if st.button('Update Fall Options Based on Winter Selections'): #I commented out the 'Update' button. 
 for course in required_courses + required_graduate_courses:
     if st.session_state[f"{course}_winter"] == 'Fully Online':
         st.session_state[f"{course}_fall"] = 'In-person'
+
+# ------------------------------- Required Core -- FIN 350 
+st.subheader('Required Core Course')
+
+# Insert additional text
+st.write("At least 5 to 10 sections of FIN 350 will offered in each of the Fall and Winter semesters.")
+st.markdown("""
+- At least 50% of the FIN 350 sections are in-person. 
+""")
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("<div style='text-align: center'><strong>Fall</strong></div>", unsafe_allow_html=True)
+    for course in required_core:
+        st.markdown(f"<div style='text-align: center'>{course}: In-Person and Fully Online</div>", unsafe_allow_html=True)
+        
+with col2:
+    st.markdown("<div style='text-align: center'><strong>Winter</strong></div>", unsafe_allow_html=True)
+
+    for course in required_core:
+        st.markdown(f"<div style='text-align: center'>{course}: In-Person and Fully Online</div>", unsafe_allow_html=True)
 
 # -------------------------------- Required Courses
 st.subheader('Required Undergraduate Courses')
@@ -130,26 +149,7 @@ with col2:
         st.markdown(f"<div style='text-align: center'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
 
 
-# ------------------------------- Required Core -- FIN 350 
-st.subheader('Required Core Course')
 
-# Insert additional text
-st.write("All of the FIN restricted electives are offered at least one time in the academic year and in any modality.  Below is the list of restricted courses that will be offered in the academic year, by semester.")
-st.markdown("""
-- The majority of the FIN restricted electives are offered in-person.
-""")
-col1, col2 = st.columns(2)
-
-with col1:
-    st.markdown("<div style='text-align: center'><strong>Fall</strong></div>", unsafe_allow_html=True)
-    for course in required_core:
-        st.markdown(f"<div style='text-align: center'>{course}: In-Person and Fully Online</div>", unsafe_allow_html=True)
-        
-with col2:
-    st.markdown("<div style='text-align: center'><strong>Winter</strong></div>", unsafe_allow_html=True)
-
-    for course in required_core:
-        st.markdown(f"<div style='text-align: center'>{course}: In-Person and Fully Online</div>", unsafe_allow_html=True)
 
 
 
