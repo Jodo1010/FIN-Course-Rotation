@@ -21,7 +21,7 @@ for course in required_courses:
     fall_option = st.selectbox(
         f"{course} (Fall):", ['In-person', 'Fully Online'], key=f"{course}_fall"
     )
-    
+
     # Winter semester dropdown with conditional options
     winter_options = ['In-person', 'Fully Online'] if fall_option == 'In-person' else ['In-person']
     winter_option = st.selectbox(
