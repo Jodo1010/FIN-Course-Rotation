@@ -88,9 +88,9 @@ for course in required_graduate_courses:
 
     # Display Winter semester options in the right column based on Fall selection
     with col2:
-        st.markdown(f"<div style='text-align: right'>**{course}:**</div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='text-align: right'><strong>{course}:<strong></div>", unsafe_allow_html=True)
         winter_options = 'In-person, Fully Online' if fall_option == 'In-person' else 'In-person'
-        st.markdown(f"<div style='text-align: right'>**{winter_options}**</div>", unsafe_allow_html=True)
+        st.markdown(f"<div style='text-align: right'>{winter_options}</div>", unsafe_allow_html=True)
 
 
 # Notes Section
