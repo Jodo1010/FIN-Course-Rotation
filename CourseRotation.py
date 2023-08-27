@@ -20,10 +20,10 @@ st.title('Course Offering & Modality Schedules')
 st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
 
 # Update button to refresh options based on Winter selections
-if st.button('Update Fall Options Based on Winter Selections'):
-    for course in required_courses + required_graduate_courses:
-        if st.session_state[f"{course}_winter"] == 'Fully Online':
-            st.session_state[f"{course}_fall"] = 'In-person'
+# if st.button('Update Fall Options Based on Winter Selections'):
+for course in required_courses + required_graduate_courses:
+    if st.session_state[f"{course}_winter"] == 'Fully Online':
+        st.session_state[f"{course}_fall"] = 'In-person'
 
 # -------------------------------- Required Courses
 st.subheader('Required Undergraduate Courses')
