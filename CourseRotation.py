@@ -56,6 +56,10 @@ for course in required_courses:
 # --------------------------- Required Graduate Courses
 st.subheader('Required Graduate Courses')
 
+# Insert additional text
+st.write("All of the FIN required graduate courses are offered in the Fall and Winter semester in multiple modalities throughout the academic year (in-person and fully online). ")
+st.write("Adjust the Fall semester modality for each course to determine the modality options for the same course in the Winter semester.")
+
 col1, col2 = st.columns(2)
 with col1:
     st.markdown("**Fall**")
