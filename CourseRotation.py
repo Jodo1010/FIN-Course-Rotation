@@ -15,8 +15,7 @@ for course in required_courses + required_graduate_courses:
 
     
 # Title and Intro
-# st.title()
-st.markdown("<div style='text-align: center';color: #046A38;'><strong>FIN Course Offering & Modality Schedules</strong></div>", unsafe_allow_html=True)
+# st.title('FIN Course Offering & Modality Schedules')
 
 # Academic Year Dropdown
 st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
@@ -55,7 +54,7 @@ with col1:
         st.markdown(f"<div style='text-align: center'>{course}: In-Person and Fully Online</div>", unsafe_allow_html=True)
         
 with col2:
-    st.markdown("<div style='text-align: center'><strong>Winter</strong></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center'><span style='color: #046A38;'><strong>Winter</strong></div>", unsafe_allow_html=True)
 
     for course in required_core:
         st.markdown(f"<div style='text-align: center'>{course}: In-Person and Fully Online</div>", unsafe_allow_html=True)
@@ -72,9 +71,9 @@ st.markdown("""
 
 col1, col2 = st.columns(2)
 with col1:
-    st.markdown("<div style='text-align: center'><strong>Fall</strong></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center'><span style='color: #046A38;'><strong>Fall</strong></div>", unsafe_allow_html=True)
 with col2:
-    st.markdown("<div style='text-align: center'><strong>Winter</strong></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center'><span style='color: #046A38;'><strong>Winter</strong></div>", unsafe_allow_html=True)
 
 for course in required_courses:
     col1, col2 = st.columns(2)
@@ -106,9 +105,9 @@ st.markdown("""
 
 col1, col2 = st.columns(2)
 with col1:
-    st.markdown("<div style='text-align: center'><strong>Fall</strong></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center'><span style='color: #046A38;'><strong>Fall</strong></div>", unsafe_allow_html=True)
 with col2:
-    st.markdown("<div style='text-align: center'><strong>Winter</strong></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center'><span style='color: #046A38;'><strong>Winter</strong></div>", unsafe_allow_html=True)
 
 for course in required_graduate_courses:
     col1, col2 = st.columns(2)
@@ -139,12 +138,12 @@ st.markdown("""
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("<div style='text-align: center'><strong>Fall</strong></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center'><span style='color: #046A38;'><strong>Fall</strong></div>", unsafe_allow_html=True)
     for course in restricted_electives_fall:
         st.markdown(f"<div style='text-align: center'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
         
 with col2:
-    st.markdown("<div style='text-align: center'><strong>Winter</strong></div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: center'><span style='color: #046A38;'><strong>Winter</strong></div>", unsafe_allow_html=True)
 
     for course in restricted_electives_winter:
         st.markdown(f"<div style='text-align: center'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
