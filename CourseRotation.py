@@ -37,15 +37,17 @@ for course in required_courses:
 st.subheader('Restricted Electives')
 col1, col2 = st.columns(2)
 
+# Display Restricted Electives for Fall (No dropdowns, just text)
 with col1:
     st.write("Fall")
     for course in restricted_electives_fall:
-        st.write(f"{course}: In-Person or Fully Online")
+        st.text(f"{course}: In-Person or Fully Online")
 
+# Display Restricted Electives for Winter (No dropdowns, just text)
 with col2:
     st.write("Winter")
     for course in restricted_electives_winter:
-        st.write(f"{course}: In-Person or Fully Online")
+        st.text(f"{course}: In-Person or Fully Online")
 
 # Notes Section
 st.text_area('Notes:', '')
