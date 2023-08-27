@@ -43,9 +43,12 @@ st.subheader('Restricted Electives')
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown("**## Fall**")
+    st.markdown("**Fall**")
+    for course in restricted_electives_fall:
+        st.text(f"{course}: In-Person or Fully Online")
+        
 with col2:
-    st.markdown("<div style='text-align: right'>**## Winter**</div>", unsafe_allow_html=True)
+    st.markdown("<div style='text-align: right'>** Winter**</div>", unsafe_allow_html=True)
 
     for course in restricted_electives_winter:
         st.markdown(f"<div style='text-align: right'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
