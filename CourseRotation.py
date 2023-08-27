@@ -5,6 +5,7 @@ required_courses = ['FIN 354', 'FIN 355', 'FIN 358', 'FIN 359', 'FIN 450W']
 restricted_electives_fall = ['FIN 451', 'FIN 456']
 restricted_electives_winter = ['FIN 453', 'FIN 455', 'FIN 457']
 required_graduate_courses = ['FIN 502', 'FIN 620']
+required_core = ['FIN 350']
 
 for course in required_courses + required_graduate_courses:
     if f"{course}_fall" not in st.session_state:
@@ -127,6 +128,30 @@ with col2:
 
     for course in restricted_electives_winter:
         st.markdown(f"<div style='text-align: center'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
+
+
+# ------------------------------- Required Core -- FIN 350 
+st.subheader('Required Core Course')
+
+# Insert additional text
+st.write("All of the FIN restricted electives are offered at least one time in the academic year and in any modality.  Below is the list of restricted courses that will be offered in the academic year, by semester.")
+st.markdown("""
+- The majority of the FIN restricted electives are offered in-person.
+""")
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("<div style='text-align: center'><strong>Fall</strong></div>", unsafe_allow_html=True)
+    for course in required_core:
+        st.markdown(f"<div style='text-align: center'>{course}: In-Person and Fully Online</div>", unsafe_allow_html=True)
+        
+with col2:
+    st.markdown("<div style='text-align: center'><strong>Winter</strong></div>", unsafe_allow_html=True)
+
+    for course in required_core:
+        st.markdown(f"<div style='text-align: center'>{course}: In-Person and Fully Online</div>", unsafe_allow_html=True)
+
+
 
 
 
