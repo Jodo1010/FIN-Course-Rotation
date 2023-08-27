@@ -26,7 +26,7 @@ st.title('Course Rotation Schedule')
 # Academic Year Dropdown
 st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
 
-# Required Courses
+# -------------------------------- Required Courses
 st.subheader('Required Courses')
 
 # Insert additional text
@@ -52,26 +52,8 @@ for course in required_courses:
         winter_options = 'In-person, Fully Online' if fall_option == 'In-person' else 'In-person'
         st.markdown(f"<div style='text-align: right'>{winter_options}</div>", unsafe_allow_html=True)
 
-# Restricted Electives
-st.subheader('Restricted Electives')
 
-# Insert additional text
-st.write("All of the FIN restricted electives are offered at least one time in the academic year and in any modality given the majority of the FIN restricted electives are offered in-person. Below is the list of restricted courses that will be offered in the Fall and Winter semester.")
-
-col1, col2 = st.columns(2)
-
-with col1:
-    st.markdown("**Fall**")
-    for course in restricted_electives_fall:
-        st.markdown(f"<div style='text-align: left'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
-        
-with col2:
-    st.markdown("<div style='text-align: right'><strong>Winter</strong></div>", unsafe_allow_html=True)
-
-    for course in restricted_electives_winter:
-        st.markdown(f"<div style='text-align: right'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
-
-# Required Graduate Courses
+# --------------------------- Required Graduate Courses
 st.subheader('Required Graduate Courses')
 col1, col2 = st.columns(2)
 with col1:
@@ -91,6 +73,27 @@ for course in required_graduate_courses:
         st.markdown(f"<div style='text-align: right'><strong>{course}:<strong></div>", unsafe_allow_html=True)
         winter_options = 'In-person, Fully Online' if fall_option == 'In-person' else 'In-person'
         st.markdown(f"<div style='text-align: right'>{winter_options}</div>", unsafe_allow_html=True)
+
+
+# ------------------------------- Restricted Electives
+st.subheader('Restricted Electives')
+
+# Insert additional text
+st.write("All of the FIN restricted electives are offered at least one time in the academic year and in any modality given the majority of the FIN restricted electives are offered in-person. Below is the list of restricted courses that will be offered in the Fall and Winter semester.")
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.markdown("**Fall**")
+    for course in restricted_electives_fall:
+        st.markdown(f"<div style='text-align: left'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
+        
+with col2:
+    st.markdown("<div style='text-align: right'><strong>Winter</strong></div>", unsafe_allow_html=True)
+
+    for course in restricted_electives_winter:
+        st.markdown(f"<div style='text-align: right'>{course}: In-Person or Fully Online</div>", unsafe_allow_html=True)
+
 
 
 # Notes Section
