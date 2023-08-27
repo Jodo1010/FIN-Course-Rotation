@@ -20,9 +20,9 @@ st.title('Course Offering & Modality Schedules')
 st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
 
 # Legend Key
-st.write('### Legend Key')
+# st.write('### Legend Key')
 st.write('- **In-person**: Face-to-Face or Hybrid')
-st.write('- **Fully Online**: Online Asynchronous or Online Synchronous')
+st.write('- **Fully Online**: Online Asynchronous, Online Synchronous, or Online Hybrid: Asynchronous & Synchronous')
 
 
 # Update button to refresh options based on Winter selections
