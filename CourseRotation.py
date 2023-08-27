@@ -12,10 +12,7 @@ for course in required_courses + required_graduate_courses:
     if f"{course}_winter" not in st.session_state:
         st.session_state[f"{course}_winter"] = 'In-person'
 
-    # Update Fall options if Winter option is selected before Fall
-    if st.session_state[f"{course}_winter"] == 'Fully Online':
-        st.session_state[f"{course}_fall"] = 'In-person'
-
+    
 # Title and Intro
 st.title('Course Offering & Modality Schedules')
 
@@ -38,6 +35,9 @@ with col2:
 for course in required_courses:
     col1, col2 = st.columns(2)
 
+    # Update Fall options if Winter option is selected before Fall
+    if st.session_state[f"{course}_winter"] == 'Fully Online':
+        st.session_state[f"{course}_fall"] = 'In-person'
 
     # Fall semester dropdown in the left column
     with col1:
@@ -66,6 +66,9 @@ with col2:
 for course in required_graduate_courses:
     col1, col2 = st.columns(2)
 
+    # Update Fall options if Winter option is selected before Fall
+    if st.session_state[f"{course}_winter"] == 'Fully Online':
+        st.session_state[f"{course}_fall"] = 'In-person'
 
     # Fall semester dropdown in the left column
     with col1:
