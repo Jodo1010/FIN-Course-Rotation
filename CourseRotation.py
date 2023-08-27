@@ -6,19 +6,15 @@ restricted_electives_fall = ['FIN 451', 'FIN 456']
 restricted_electives_winter = ['FIN 453', 'FIN 455', 'FIN 457']
 required_graduate_courses = ['FIN 502', 'FIN 620']
 
-for course in required_courses:
+for course in required_courses + required_graduate_courses:
     if f"{course}_fall" not in st.session_state:
         st.session_state[f"{course}_fall"] = 'In-person'
     if f"{course}_winter" not in st.session_state:
         st.session_state[f"{course}_winter"] = 'In-person'
 
-# Initialize state for each required graduate course and semester if not already initialized
-
-for course in required_graduate_courses:
-    if f"{course}_fall" not in st.session_state:
+    # Update Fall options if Winter option is selected before Fall
+    if st.session_state[f"{course}_winter"] == 'Fully Online':
         st.session_state[f"{course}_fall"] = 'In-person'
-    if f"{course}_winter" not in st.session_state:
-        st.session_state[f"{course}_winter"] = 'In-person'
 
 # Title and Intro
 st.title('Course Offering & Modality Schedules')
@@ -42,9 +38,6 @@ with col2:
 for course in required_courses:
     col1, col2 = st.columns(2)
 
-    # Update Fall options if Winter option is selected before Fall
-    if st.session_state[f"{course}_winter"] == 'Fully Online':
-       st.session_state[f"{course}_fall"] = 'In-person'
 
     # Fall semester dropdown in the left column
     with col1:
@@ -55,9 +48,6 @@ for course in required_courses:
         winter_options = ['In-person', 'Fully Online'] if fall_option == 'In-person' else ['In-person']
         winter_option = st.selectbox(f"**{course}:**", winter_options, key=f"{course}_winter")
 
-    # Update Fall options if Winter option is selected before Fall
-    if winter_option == 'Fully Online':
-        st.session_state[f"{course}_fall"] = 'In-person'
 
 
 # --------------------------- Required Graduate Courses
@@ -76,9 +66,6 @@ with col2:
 for course in required_graduate_courses:
     col1, col2 = st.columns(2)
 
-    # Update Fall options if Winter option is selected before Fall
-    if st.session_state[f"{course}_winter"] == 'Fully Online':
-       st.session_state[f"{course}_fall"] = 'In-person'
 
     # Fall semester dropdown in the left column
     with col1:
@@ -89,9 +76,6 @@ for course in required_graduate_courses:
         winter_options = ['In-person', 'Fully Online'] if fall_option == 'In-person' else ['In-person']
         winter_option = st.selectbox(f"**{course}:**", winter_options, key=f"{course}_winter")
 
-    # Update Fall options if Winter option is selected before Fall
-    if winter_option == 'Fully Online':
-        st.session_state[f"{course}_fall"] = 'In-person'
 
 
 # ------------------------------- Restricted Electives
