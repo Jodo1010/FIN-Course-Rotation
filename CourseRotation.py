@@ -15,7 +15,7 @@ for course in required_courses + required_graduate_courses:
 
     
 # Title and Intro
-# st.title('FIN Course Offering & Modality Schedules')
+st.title('FIN Course Offering & Modality Schedules')
 
 # Academic Year Dropdown
 st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
