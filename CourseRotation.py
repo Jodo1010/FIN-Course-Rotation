@@ -21,7 +21,7 @@ for course in required_graduate_courses:
         st.session_state[f"{course}_winter"] = 'In-person'
 
 # Title and Intro
-st.title('Course Rotation Schedule')
+st.title('Course Offering & Modality Schedules')
 
 # Academic Year Dropdown
 st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
