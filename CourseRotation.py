@@ -16,7 +16,7 @@ for course in required_courses + required_graduate_courses:
     
 # Title and Intro
 # st.title()
- st.markdown("<div style='text-align: center';color: #046A38;'><strong>FIN Course Offering & Modality Schedules</strong></div>", unsafe_allow_html=True)
+st.markdown("<div style='text-align: center';color: #046A38;'><strong>FIN Course Offering & Modality Schedules</strong></div>", unsafe_allow_html=True)
 
 # Academic Year Dropdown
 st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
