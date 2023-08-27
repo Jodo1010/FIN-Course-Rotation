@@ -27,7 +27,7 @@ st.title('Course Rotation Schedule')
 st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
 
 # -------------------------------- Required Courses
-st.subheader('Required Courses')
+st.subheader('Required Undergraduate Courses')
 
 # Insert additional text
 st.write("All of the FIN required courses are offered in the Fall and Winter semester in multiple modalities throughout the academic year (in-person and fully online). ")
@@ -76,7 +76,7 @@ for course in required_graduate_courses:
 
 
 # ------------------------------- Restricted Electives
-st.subheader('Restricted Electives')
+st.subheader('Restricted Undergraduate Electives')
 
 # Insert additional text
 st.write("All of the FIN restricted electives are offered at least one time in the academic year and in any modality given the majority of the FIN restricted electives are offered in-person. Below is the list of restricted courses that will be offered in the Fall and Winter semester.")
