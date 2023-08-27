@@ -53,7 +53,7 @@ for course in required_courses:
     #     # st.markdown(f"<div style='text-align: right'>{winter_options}</div>", unsafe_allow_html=True)
     with col2:
         winter_options = ['In-person', 'Fully Online'] if fall_option == 'In-person' else ['In-person']
-        winter_option = st.selectbox(f"**{course} (Winter):**", winter_options, key=f"{course}_winter")
+        winter_option = st.selectbox(f"**{course}:**", winter_options, key=f"{course}_winter")
 
     # Update Fall options if Winter option is selected before Fall
     if winter_option == 'Fully Online':
@@ -87,7 +87,7 @@ for course in required_graduate_courses:
         # st.markdown(f"<div style='text-align: right'>{winter_options}</div>", unsafe_allow_html=True)
     with col2:
         winter_options = ['In-person', 'Fully Online'] if fall_option == 'In-person' else ['In-person']
-        winter_option = st.selectbox(f"**{course} (Winter):**", winter_options, key=f"{course}_winter")
+        winter_option = st.selectbox(f"**{course}:**", winter_options, key=f"{course}_winter")
 
     # Update Fall options if Winter option is selected before Fall
     if winter_option == 'Fully Online':
