@@ -30,7 +30,7 @@ for course in required_courses:
 
     # Fall semester dropdown in the left column
     with col1:
-        fall_option = st.selectbox("", ['In-person', 'Fully Online'], key=f"{course}_fall", format_func=lambda x: f"{course} (Fall): {x}")
+        fall_option = st.selectbox(f"{course} (Fall):", ['In-person', 'Fully Online'], key=f"{course}_fall")
 
     # Display Winter semester options in the right column based on Fall selection
     with col2:
