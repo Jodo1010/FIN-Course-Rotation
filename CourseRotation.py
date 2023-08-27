@@ -25,13 +25,13 @@ for course in required_courses:
     # Fall semester dropdown in the left column
     with col1:
         fall_option = st.selectbox(
-            f"{course} (Fall):", ['In-person', 'Fully Online'], key=f"{course}_fall"
+            f"{course}:", ['In-person', 'Fully Online'], key=f"{course}_fall"
         )
     
     # Display Winter semester options in the right column based on Fall selection
     with col2:
         winter_options = 'In-person, Fully Online' if fall_option == 'In-person' else 'In-person'
-        st.write(f"{course} (Winter) options: {winter_options}")
+        st.write(f"{course} Winter options: {winter_options}")
 
 # Restricted Electives
 st.subheader('Restricted Electives')
