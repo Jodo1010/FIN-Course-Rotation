@@ -45,8 +45,8 @@ st.subheader('Required Undergraduate Courses')
 # Insert additional text
 st.write("All of the FIN required courses are offered in the Fall and Winter semester in multiple modalities throughout the academic year (in-person and fully online). ")
 st.markdown("""
-- Adjust a semester's modality for each course to determine the modality options for the same course in the Winter semester.
-- The dropdown menus will self-adjust if an unallowed sequence of courses is selected e.g., selecting a fully online Restricted Elective course in both the Fall and Winter semester. 
+- Use the dropdown menus below to adjust a semester's modality for each course to determine the modality options for the same course in either semester.
+- The dropdown menus will self-adjust if an unallowed sequence of modalities is selected e.g., selecting a fully online Restricted Elective course in both the Fall and Winter semester. 
 """)
 
 col1, col2 = st.columns(2)
