@@ -108,9 +108,9 @@ with col2:
 
 
 
-# ------------------------------- Notes Section
-st.text_area('Notes:', '')
+# # ------------------------------- Notes Section
+# st.text_area('Notes:', '')
 
-# Validate and Submit Button
-if st.button('Submit'):
-    st.write('Submitted Successfully')
+# # Validate and Submit Button
+# if st.button('Submit'):
+#     st.write('Submitted Successfully')
