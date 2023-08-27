@@ -21,7 +21,7 @@ st.selectbox('Select Academic Year:', ['2023-2024', '2024-2025', '2025-2026'])
 st.subheader('Required Courses')
 
 # Insert additional text
-st.write("All of the FIN required courses are offered in the Fall and Winter semester in multiple modalities (in-person and fully online). ")
+st.write("All of the FIN required courses are offered in the Fall and Winter semester in multiple modalities throughout the academic year (in-person and fully online). ")
 
 col1, col2 = st.columns(2)
 with col1:
@@ -46,7 +46,7 @@ for course in required_courses:
 st.subheader('Restricted Electives')
 
 # Insert additional text
-st.write("All of the FIN restricted electives are offered at least once in either the Fall or Winter semester and can be offered in any modality. The majority of the FIN restricted electives are offered in-person.")
+st.write("All of the FIN restricted electives are offered at least one time in the academic year and in any modality given the majority of the FIN restricted electives are offered in-person. Below is the list of restricted courses that will be offered in the Fall and Winter semester.")
 
 col1, col2 = st.columns(2)
 
