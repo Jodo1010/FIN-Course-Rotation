@@ -6,6 +6,6 @@ backgroundColor = "#00172B"
 
 secondaryBackgroundColor = "#0083B8"
 
-textColor = "#046A38"
+textColor = "#FFF"
 
-font = "Serif"
+font = "sans serif"
