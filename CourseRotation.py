@@ -36,6 +36,9 @@ st.markdown("""
 <span style='color: #046A38;'>Click the button below to download the PDF:</span>
 """, unsafe_allow_html=True)
 
+with open('Course-Modality-Matrix.pdf', 'rb') as f:
+    pdf_bytes = f.read()
+
 st.download_button(
     label="Download Course Modality Policy.pdf",
     data=pdf_bytes,
