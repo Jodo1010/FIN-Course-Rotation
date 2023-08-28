@@ -29,7 +29,7 @@ st.markdown("""
 - **Fully Online**:
   - Online Asynchronous
   - Online Synchronous
-  - Online Hybrid (Asychronous & Synchronous) 
+  - Online Hybrid (Asynchronous & Synchronous) 
 """)
 
 st.markdown("""
