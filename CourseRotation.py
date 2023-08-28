@@ -32,6 +32,16 @@ st.markdown("""
   - Online Hybrid (Asychronous & Synchronous) 
 """)
 
+with open('Course-Modality-Matrix.pdf', 'rb') as f:
+    pdf_bytes = f.read()
+
+st.download_button(
+    label="Download Course Modality Policy",
+    data=pdf_bytes,
+    file_name='Course-Modality-Matrix.pdf',
+    mime='application/pdf',
+)
+
 # Update button to refresh options based on Winter selections
 # if st.button('Update Fall Options Based on Winter Selections'): #I commented out the 'Update' button. 
 for course in required_courses + required_graduate_courses:
