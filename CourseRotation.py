@@ -40,7 +40,7 @@ with open('Course-Modality-Matrix.pdf', 'rb') as f:
     pdf_bytes = f.read()
 
 st.download_button(
-    label="Course Modality Policy.pdf",
+    label="Course Modality Policy",
     data=pdf_bytes,
     file_name='Course-Modality-Matrix.pdf',
     mime='application/pdf',
