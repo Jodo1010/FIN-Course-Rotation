@@ -37,7 +37,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.download_button(
-    label="Download Course-Modality-Matrix.pdf",
+    label="Download Course Modality Policy.pdf",
     data=pdf_bytes,
     file_name='Course-Modality-Matrix.pdf',
     mime='application/pdf',
