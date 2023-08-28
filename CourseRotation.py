@@ -59,7 +59,7 @@ st.subheader('Required Core Course')
 # Insert additional text
 st.write("At least 5 to 10 sections of FIN 350 will offered in each of the Fall and Winter semesters.")
 st.markdown("""
-- At least 50% of the FIN 350 sections are in-person. 
+- At least 50% of the FIN 350 sections in each semester are in-person. 
 """)
 col1, col2 = st.columns(2)
 
