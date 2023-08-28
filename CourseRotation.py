@@ -33,14 +33,14 @@ st.markdown("""
 """)
 
 st.markdown("""
-<span style='color: #046A38;'>Click the button below to download the PDF:</span>
+<span style='color: #046A38;'>To access the approved modality rotation, click the button below:</span>
 """, unsafe_allow_html=True)
 
 with open('Course-Modality-Matrix.pdf', 'rb') as f:
     pdf_bytes = f.read()
 
 st.download_button(
-    label="Download Course Modality Policy.pdf",
+    label="Course Modality Policy.pdf",
     data=pdf_bytes,
     file_name='Course-Modality-Matrix.pdf',
     mime='application/pdf',
