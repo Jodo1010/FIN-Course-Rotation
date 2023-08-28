@@ -34,8 +34,8 @@ st.markdown("""
 
 st.markdown("""
     <style>
-        .download-button {
-            background-color: #046A38;
+        a.stButton > span {
+            color: #046A38;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -44,7 +44,7 @@ with open('Course-Modality-Matrix.pdf', 'rb') as f:
     pdf_bytes = f.read()
 
 st.download_button(
-    label="Download Course Modality Policy",
+    label="Download Course-Modality-Matrix.pdf",
     data=pdf_bytes,
     file_name='Course-Modality-Matrix.pdf',
     mime='application/pdf',
