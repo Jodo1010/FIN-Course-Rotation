@@ -32,6 +32,14 @@ st.markdown("""
   - Online Hybrid (Asychronous & Synchronous) 
 """)
 
+st.markdown("""
+    <style>
+        .download-button {
+            background-color: #046A38;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 with open('Course-Modality-Matrix.pdf', 'rb') as f:
     pdf_bytes = f.read()
 
@@ -40,6 +48,7 @@ st.download_button(
     data=pdf_bytes,
     file_name='Course-Modality-Matrix.pdf',
     mime='application/pdf',
+    key='download-button'
 )
 
 # Update button to refresh options based on Winter selections
